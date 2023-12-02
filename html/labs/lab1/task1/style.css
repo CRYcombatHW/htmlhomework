@@ -1,0 +1,22 @@
+body {
+	margin: 0% 25%;
+}
+
+.pagination_container {
+	display: flex;
+	justify-content: center;
+}
+
+.pagination_item {
+	text-decoration: none;
+
+	margin-right: 8px;
+}
+
+.pagination_container a:hover {
+	text-decoration: underline;
+}
+
+.b {
+	font-weight: bold;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../../task_browser.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+<div class="task_browser">
+	<div class="task_header">
+		<div class="task_container">
+			<div class="task_a"><a>Task 1</a></div>
+		</div>
+		<div class="return_a">
+			<a href="../../../main.html">Back</a>
+		</div>
+	</div>
+	<div class="task_description">
+		Взяти статью з інтернета і розбити на сторінки
+	</div>
+</div>
+<body>
+	<h3>Архитектура WPF</h3>
+	<p>Схематически архитектуру WPF можно представить следующим образом:</p>
+	<img src="https://metanit.com/sharp/wpf/pics/1.4.png">
+	<p>
+		Как видно на схеме, WPF разбивается на два уровня: managed API и unmanaged API (уровень интеграции с DirectX). 
+		Managed API (управляемый API-интерфейс) содержит код, исполняемый под управлением общеязыковой среды выполнения .NET - Common Language Runtime. 
+		Этот API описывает основной функционал платформы WPF и состоит из следующих компонентов:
+	</p>
+	<ul>
+		<li><p><span class="b">PresentationFramework.dll</span>: содержит все основные реализации компонентов и элементов управления, которые можно использовать при 
+		построении графического интерфейса</p></li>
+		<li><p><span class="b">PresentationCore.dll</span>: содержит все базовые типы для большинства классов из PresentationFramework.dll</p></li>
+		<li><p><span class="b">WindowsBase.dll</span>: содержит ряд вспомогательных классов, которые применяются в WPF, но могут также использоваться и вне данной платформы</p></li>
+	</ul>
+	<p>Unmanaged API используется для интеграции вышележащего уровня с DirectX:</p>
+	<ul>
+		<li><p><span class="b">milcore.dll</span>: собственно обеспечивает интеграцию компонентов WPF с DirectX. Данный компонент написан на неуправляемом коде 
+		(С/С++) для взаимодействия с DirectX.</p></li>
+		<li><p><span class="b">WindowsCodecs.dll</span>: библиотека, которая предоставляет низкоуровневую поддержку для изображений в WPF</p></li>
+	</ul>
+	<p>
+		Еще ниже собственно находятся компоненты операционной системы и DirectX, которые произвоят визуализацию компонентов приложения, либо выполняют прочую низкоуровневую обработку. 
+		В частности, с помощью низкоуровневого интерфейса Direct3D, который входит в состав DirectX, происходит трансляция
+	</p>
+	<p>
+		Здесь также на одном уровне находится библиотека <span class="b">user32.dll</span>. И хотя выше говорилось, что WPF не использует эту библиотеку 
+		для рендеринга и визуализации, однако для ряда вычислительных задач (не включающих визуализацию) данная библиотека продолжает использоваться.
+	</p>
+
+	<div class="pagination_container">
+		<a class="pagination_item" href="page2.html">&lt;</a>
+		<a class="pagination_item" href="page1.html">1</a>
+		<a class="pagination_item" href="page2.html">2</a>
+		<div class="pagination_item">3</div>
+		<div class="pagination_item">&gt;</div>
+	</div>
+</body>
+</html>
